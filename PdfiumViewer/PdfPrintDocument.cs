@@ -222,6 +222,7 @@ namespace PdfiumViewer
                 PdfRotation.Rotate0, PdfRenderFlags.ForPrinting | PdfRenderFlags.Annotations);
 
             e.Graphics.DrawImageUnscaled(image, e.PageBounds.Location);
+            image.Dispose();
         }
 
         private static void Swap(ref double a, ref double b)
