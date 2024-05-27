@@ -75,7 +75,7 @@ namespace PdfiumViewer.WPFDemo
 
         private BitmapSource RenderPageToMemDC(int page, int width, int height)
         {
-            var image = pdfDoc.Render(page, width, height, 96, 96, false);
+            var image = pdfDoc.Render(page, width, height, 96, 96, PdfRenderFlags.ForPrinting | PdfRenderFlags.Annotations);
             return BitmapHelper.ToBitmapSource(image);
         }
 
